@@ -1,0 +1,65 @@
+name: ✨ Feature Request
+description: Schlage ein neues Feature vor
+title: "[Feature]: "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature-Vorschlag
+        Beschreibe deine Idee für ein neues Feature!
+
+  - type: input
+    id: title
+    attributes:
+      label: Feature-Titel
+      description: Kurzer, prägnanter Titel
+      placeholder: "z.B. Exponential-Funktion hinzufügen"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem-Beschreibung
+      description: Welches Problem löst dieses Feature?
+      placeholder: "Als Nutzer möchte ich... damit ich..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Lösungsvorschlag
+      description: Wie sollte das Feature funktionieren?
+      placeholder: Beschreibe deine Vorstellung
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Lösungen
+      description: Hast du andere Ansätze in Betracht gezogen?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Wie wichtig ist dir dieses Feature?
+      options:
+        - Nice to have
+        - Would improve workflow
+        - Essential for my use case
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Mitarbeit
+      options:
+        - label: Ich würde dieses Feature gerne selbst implementieren
+          required: false
