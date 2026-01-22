@@ -1,0 +1,24 @@
+# CODEOWNERS - Automatische Reviewer-Zuweisung
+
+# Global Owner (Fallback für alle Dateien)
+* @AndySchw
+
+# JavaScript Dateien
+*.js @AndySchw
+*.jsx @AndySchw
+
+# Documentation
+*.md @AndySchw
+/docs/ @AndySchw
+
+# GitHub spezifische Dateien
+/.github/ @AndySchw
+
+# Issue Templates
+/.github/ISSUE_TEMPLATE/ @AndySchw
+
+# Workflows (CI/CD)
+/.github/workflows/ @AndySchw
+
+# Calculator spezifisch
+calculator.js @AndySchw
