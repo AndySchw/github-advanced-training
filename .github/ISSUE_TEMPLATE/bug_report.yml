@@ -1,0 +1,94 @@
+name: 🐛 Bug Report
+description: Melde einen Fehler oder ein Problem
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Danke für den Bug-Report!
+        Bitte fülle das Formular vollständig aus, damit wir das Problem schnell beheben können.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Zusammenfassung
+      description: Kurze Beschreibung des Problems
+      placeholder: "z.B. Calculator wirft Fehler bei negativen Zahlen"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detaillierte Beschreibung
+      description: Was ist passiert? Was hast du erwartet?
+      placeholder: |
+        1. Was ist passiert?
+        2. Was sollte stattdessen passieren?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Schritte zur Reproduktion
+      description: Wie können wir den Fehler nachvollziehen?
+      placeholder: |
+        1. Gehe zu '...'
+        2. Klicke auf '...'
+        3. Scrolle nach unten zu '...'
+        4. Siehe Fehler
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: In welchem Browser tritt der Fehler auf?
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priorität
+      description: Wie dringend ist dieser Bug?
+      options:
+        - Low - Kosmetisches Problem
+        - Medium - Beeinträchtigt Funktionalität
+        - High - Blockiert wichtige Features
+        - Critical - Kompletter Ausfall
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checkliste
+      description: Bitte bestätige folgende Punkte
+      options:
+        - label: Ich habe nach ähnlichen Issues gesucht
+          required: true
+        - label: Ich habe die neueste Version getestet
+          required: true
+        - label: Ich bin bereit, weitere Informationen bereitzustellen
+          required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
+      description: Füge relevante Logs oder Screenshots hinzu
+      placeholder: Ziehe Dateien hier rein oder füge sie ein
+    validations:
+      required: false
