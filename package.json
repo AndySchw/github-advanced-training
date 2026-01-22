@@ -1,0 +1,13 @@
+{
+  "name": "github-advanced-training",
+  "version": "1.0.0",
+  "description": "GitHub Training Project",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "node test.js",
+    "lint": "echo 'Linting code...' && exit 0"
+  },
+  "keywords": ["github", "training"],
+  "author": "Your Name",
+  "license": "MIT"
+}
