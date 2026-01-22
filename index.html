@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .calculator {
+            background: white;
+            color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #5568d3;
+        }
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>🧮 Calculator Demo</h1>
+        <p>GitHub Foundation Training - Tag 3</p>
+
+        <input type="number" id="num1" placeholder="Erste Zahl">
+        <input type="number" id="num2" placeholder="Zweite Zahl">
+
+        <button onclick="calculate('add')">➕ Addition</button>
+        <button onclick="calculate('subtract')">➖ Subtraktion</button>
+        <button onclick="calculate('multiply')">✖️ Multiplikation</button>
+        <button onclick="calculate('divide')">➗ Division</button>
+
+        <div id="result">Ergebnis: -</div>
+    </div>
+
+    <script>
+        function calculate(operation) {
+            const a = parseFloat(document.getElementById('num1').value);
+            const b = parseFloat(document.getElementById('num2').value);
+            let result;
+
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById('result').textContent = '❌ Bitte beide Zahlen eingeben!';
+                return;
+            }
+
+            switch(operation) {
+                case 'add':
+                    result = a + b;
+                    break;
+                case 'subtract':
+                    result = a - b;
+                    break;
+                case 'multiply':
+                    result = a * b;
+                    break;
+                case 'divide':
+                    if (b === 0) {
+                        document.getElementById('result').textContent = '❌ Division durch 0 nicht möglich!';
+                        return;
+                    }
+                    result = a / b;
+                    break;
+            }
+
+            document.getElementById('result').textContent = `Ergebnis: ${result}`;
+        }
+    </script>
+</body>
+</html>
